@@ -1,0 +1,78 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Basic styling for the navigation bar */
+  .nav {
+    background-color: #fff;
+    border: 1px solid #ccc;
+  }
+  
+  /* Styling for the container of navigation elements */
+  .nav-container {
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Styling for the logo */
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #333; /* Adjust as needed */
+  }
+  
+  /* Styling for the toggle button */
+  .toggle-btn {
+    display: none; /* Hidden by default on larger screens */
+  }
+  
+  /* Styling for the menu list */
+  .menu-list {
+    display: flex;
+    list-style: none;
+  }
+  
+  /* Styling for individual menu items */
+  .menu-item {
+    margin-right: 1rem; /* Adjust as needed */
+  }
+  
+  .menu-item a {
+    text-decoration: none;
+    color: #333; /* Adjust as needed */
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+  }
+  
+  .menu-item a:hover {
+    background-color: #f0f0f0; /* Adjust as needed */
+  }
+  
+  /* Media query for smaller screens */
+  @media screen and (max-width: 768px) {
+    .toggle-btn {
+      display: block;
+    }
+    .menu-list {
+      display: none; /* Hidden by default on smaller screens */
+      flex-direction: column;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 1rem;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+    }
+    .menu-list.show {
+      display: flex; /* Display when the toggle button is clicked */
+    }
+  }
+  
